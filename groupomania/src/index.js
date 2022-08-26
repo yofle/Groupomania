@@ -8,11 +8,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { applyMiddleware, legacy_createStore } from 'redux';
 import thunk from 'redux-thunk'
 import rootReducer from './reducers'
+import { getUsers } from "./actions/users.actions";
 
 
 const store = legacy_createStore(
   rootReducer, composeWithDevTools(applyMiddleware(thunk))
 )
+store.dispatch(getUsers());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
