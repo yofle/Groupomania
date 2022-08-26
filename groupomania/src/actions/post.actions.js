@@ -4,6 +4,8 @@ import axios from "axios"
 export const GET_POSTS ="GET_POSTS";
 export const LIKE_POST ="LIKE_POST"
 export const UNLIKE_POST ="UNLIKE_POST"
+export const UPDATE_POST ="UPDATE_POST"
+export const DELETE_POST ="DELETE_POST"
 
 export const getPosts = () => {
     return (dispatch) => {
@@ -41,6 +43,36 @@ export const likePost = (postId, userId) => {
       })
         .then((res) => {
           dispatch({ type: UNLIKE_POST, payload: { postId, userId } });
+        })
+        .catch((err) => console.log(err));
+    };
+  };
+
+  export const updatePost = (postId, message) => {
+    return (dispatch) => {
+      return axios({
+        method: "put",
+        url: `http://localhost:5000/api/post/${postId}`,
+        data: {message},
+        withCredentials : true,
+      })
+        .then((res) => {
+          dispatch({ type: UPDATE_POST, payload: {message, postId } });
+          
+        })
+        .catch((err) => console.log(err));
+    };
+  };
+
+  export const deletePost = (postId) => {
+    return (dispatch) => {
+      return axios({
+        method: "delete",
+        url: `http://localhost:5000/api/post/${postId}`,
+        withCredentials : true,
+      })
+        .then((res) => {
+          dispatch({ type: DELETE_POST, payload: { postId } });
         })
         .catch((err) => console.log(err));
     };
