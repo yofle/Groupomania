@@ -19,7 +19,9 @@ export const dateParser = (num) => {
     return date.toString();
   };
   
+  //dans le back il y a une référence en ms qui permet de connaitre a date du commentaire
   export const timestampParser = (num) => {
+    //note js date
     let options = {
       hour: "2-digit",
       minute: "2-digit",
