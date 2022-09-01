@@ -11,7 +11,7 @@ module.exports.readPost = (req, res) => {
   PostModel.find((err, docs) => {
     if (!err) res.send(docs);
     else console.log("Error to get data : " + err);
-  }).sort({ createdAt: -1 });
+  }).sort({ createdAt: -1 });//trie des pots en fonction de leur date
 };
 
 module.exports.createPost = async (req, res) => {
@@ -36,7 +36,7 @@ module.exports.createPost = async (req, res) => {
     await pipeline(
       req.file.stream,
       fs.createWriteStream(
-        `${__dirname}/../client/public/uploads/posts/${fileName}`
+        `${__dirname}/./uploads/posts/${fileName}`
       )
     );
   }
@@ -44,7 +44,7 @@ module.exports.createPost = async (req, res) => {
   const newPost = new postModel({
     posterId: req.body.posterId,
     message: req.body.message,
-    picture: req.file !== null ? "./uploads/posts/" + fileName : "",
+    picture: req.file !== undefined ? "./uploads/posts/" + fileName : "",
     video: req.body.video,
     likers: [],
     comments: [],

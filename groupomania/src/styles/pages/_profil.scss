@@ -18,7 +18,7 @@
 
   .connection-form {
     border: none;
-    background: $color-4;
+    background: $color-2;
     min-width: 490px;
     width: 90%;
     text-align: center;
@@ -122,15 +122,14 @@
     }
   }
   .update-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    margin: 50px;
 
     @media screen and(max-width: 700px) {
       grid-template-columns: 1fr;
     }
 
     > div {
-      background: $color-4;
+      background: $color-2;
       border-radius: 20px;
       padding: 25px;
       margin: 20px 10px;
@@ -223,8 +222,8 @@
         margin: 60px 0 10px;
       }
       h5 {
-        background: $color-1;
-        color: $color-4;
+        background: $color-3;
+        color: $color-3;
         font-family: $font-1;
         margin: 20px 0;
         padding: 12px;
@@ -301,7 +300,7 @@
           width: 2px;
         }
         &::-webkit-scrollbar-track {
-          background: $color-4;
+          background: $color-2;
         }
         &::-webkit-scrollbar-thumb {
           background: $color-1;
@@ -331,7 +330,7 @@
             text-align: left;
 
             button {
-              background: $color-4;
+              background: 2;
               border-radius: 20px;
               margin-right: 6px;
 

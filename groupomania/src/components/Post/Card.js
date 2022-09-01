@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts, updatePost } from "../../actions/post.actions";
+import { updatePost } from "../../actions/post.actions";
 import { isEmpty } from "../Utils";
 import { dateParser } from "../Utils";
 import CardComments from "./CardComment";
