@@ -27,6 +27,7 @@ const SignUpForm = ()=> {
       await axios({
         method: "post",
         url: `http://localhost:5000/api/user/register`,
+        withCredentials: true,
         data: {
           pseudo,
           email,

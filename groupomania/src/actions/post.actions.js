@@ -32,10 +32,14 @@ export const getPosts = (num) => {
 
 export const addPost = (data) => {
   return (dispatch) => {
-      return axios
-      .post(`http://localhost:5000/api/post/`, data)
-  }
-}
+    return axios({
+      method: "post",
+      url:`http://localhost:5000/api/post/`,
+      data: data,
+      withCredentials : true,
+    })
+  };
+};
 
 export const likePost = (postId, userId) => {
     return (dispatch) => {
