@@ -91,7 +91,7 @@ const Card= ({ post }) => {
                             title={post._id}>
                         </iframe>
                     )}
-                    {userData._id === post.posterId && (
+                    {userData._id === post.posterId && userData.admin === false && (
                         <div className="button-container">
                             <div onClick={() => setIsUptated(!isUpdated/* permet lors du click d'avoir le btn et de l'enlever*/)}>
                                 <img src="./img/icons/edit.svg" alt="edit"/>
@@ -99,6 +99,16 @@ const Card= ({ post }) => {
                             <DeleteCard id={post._id} />
                         </div>
                     )}
+
+                    {userData.admin  === true &&(
+                        <div className="button-container">
+                            <div onClick={() => setIsUptated(!isUpdated/* permet lors du click d'avoir le btn et de l'enlever*/)}>
+                                <img src="./img/icons/edit.svg" alt="edit"/>
+                            </div>
+                            <DeleteCard id={post._id} />
+                        </div>
+                    )}
+
                     <div className="card-footer">
                         <div className="comment-icon">
                             <img 

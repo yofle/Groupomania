@@ -9,12 +9,14 @@ import { applyMiddleware, legacy_createStore } from 'redux';
 import thunk from 'redux-thunk'
 import rootReducer from './reducers'
 import { getUsers } from "./actions/users.actions";
+import { getPosts } from './actions/post.actions';
 
 
 const store = legacy_createStore(
   rootReducer, composeWithDevTools(applyMiddleware(thunk))
 )
 store.dispatch(getUsers());
+store.dispatch(getPosts());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

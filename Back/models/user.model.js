@@ -30,6 +30,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: `http://localhost:${process.env.PORT}/uploads/random-user.png`
     },
+    admin: { 
+      type: Boolean, //permet de definir un état de remplissage
+      default: false// vide
+    },
   },
   {
     timestamps: true,

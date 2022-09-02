@@ -16,7 +16,7 @@ const Profil = ()=> {
         <div className="log-container">
           <Log signin={false} signup={true}/>
             <div className="img-container">
-              <img src="./img/Log.svg" alt="img authentification"/>
+              <img src="./img/icon-left-font.png" alt="img authentification"/>
             </div>
         </div>
         )}
