@@ -11,7 +11,6 @@ Mise en place du Backend :
         - FRONT_END_URL=http://localhost:3000
         - DB_USER_PASS=Votre identifiant et Mdp de MongoDb sous cette forme : Identifiant:Mdp
         - TOKEN_SECRET=88dsdsS8SDS8S5232177FFPhF33Mi844cDLj55d5D55CV5QjKXAy654872kljrd86156JGHJbBjhJKj256559BlMKjHFgDFkj565GF23454BGG5ENB456RkLlK12Lkl7nSL7Ljj8
-    - Créez un dossier uploads pour les images (Profil et Post) dans /Back
 
 Demarrer le back (la première fois) :
 
