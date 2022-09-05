@@ -22,5 +22,5 @@ Demarrer le Font (la première fois) :
 
 Le Back-end : cd Back-end -> nodemon server
 
-Le Front-end : cd Front-end -> yarn start
+Le Front-end : cd groupomania -> yarn start
     
